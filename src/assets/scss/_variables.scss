@@ -1,0 +1,43 @@
+// Colors
+$blue-light: #f6f7fa;
+$blue-medium: #d6e2f7;
+$blue-dark: #1c4ea5;
+$gray: #9ca0a5;
+$gray-light: #cfd1d3;
+$gray-medium: #56595d;
+$gray-dark: #0b0c0d;
+$green: #1BCDA3;
+$green-light: #B5F3E7;
+$green-dark: #27b592;
+$white: #ffffff;
+$error: #DA291C;
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+$font-ibm-plex-sans: "IBM Plex Sans",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;
+$font-poppins: "Poppins",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;
+$font-size: 1rem;
+$line-height: 1.5;

@@ -1,0 +1,68 @@
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: scroll; // always show the vertical scrollbar so that content doesn't jump
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+// inherited from <html>
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  text-size-adjust: 100%; // iOS on orientation change
+  position: relative;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button,
+select,
+label,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: $blue-dark;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:focus {
+    box-shadow: 0 0 0 1px $blue-dark;
+    outline: 1px dotted $white;
+    outline-offset: -1px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}

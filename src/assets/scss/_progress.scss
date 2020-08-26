@@ -1,0 +1,42 @@
+.progress {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 9999;
+
+  &__bar {
+    width: 100%;
+    background: $green-light;
+    border: 0;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &__fill {
+    background: $green;
+    border: 0;
+    border-radius: 6px 6px 0 0;
+    height: 1rem;
+    max-width: 100%;
+  }
+
+  &__tooltip {
+    background: $blue-medium;
+    color: $blue-dark;
+    font-family: "IBM Plex Sans", sans-serif;
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    margin: 1rem auto;
+    position: relative;
+
+    .arrow {
+      border-top: solid $blue-medium 10px;
+      border-left: solid transparent 10px;
+      border-right: solid transparent 10px;
+      bottom: -10px;
+      content: "";
+      height: 0;
+      left: calc(50% - 10px);
+      position: absolute;
+      width: 0;
+    }
+  }
+}

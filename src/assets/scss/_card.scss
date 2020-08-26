@@ -1,0 +1,24 @@
+.card {
+  background-color: $white;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 0.5rem 1rem -0.125rem rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+  padding: 1rem 2rem 2rem;
+  position: relative;
+
+  &__title {
+    color: $gray-dark;
+    font-family: $font-poppins;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 1rem auto;
+  }
+
+  &__text {
+    color: $gray-medium;
+    font-family: $font-ibm-plex-sans;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

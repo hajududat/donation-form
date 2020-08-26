@@ -1,0 +1,80 @@
+.button {
+  font-family: $font-poppins;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0 16px;
+  height: 48px;
+  border: 0;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  &__primary {
+    background-color: $green;
+    color: $white;
+    transition: all .2s ease-in-out;
+
+    &:focus {
+      background-color: $green;
+      box-shadow: inset 0 0 0 2px $green,
+        inset 0 0 0 3px $white;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $green-dark;
+    }
+  }
+
+  &__secondary {
+    background-color: $gray-light;
+    color: $gray-dark;
+    transition: all .2s ease-in-out;
+
+    &:focus {
+      background-color: $gray-light;
+      box-shadow: inset 0 0 0 2px $gray-light,
+        inset 0 0 0 3px $white;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $gray-dark;
+      color: $white;
+    }
+
+    &--outline {
+      background-color: none;
+      border: 1px solid $gray;
+      height: 46px;
+
+      &:focus {
+        border: 1px solid $gray-medium;
+        box-shadow: inset 0 0 0 1px $gray-medium;
+      }
+
+      &:hover,
+      &:active {
+        border: 1px solid $gray-dark;
+      }
+    }
+  }
+
+  &:focus {
+    outline-color: transparent;
+    outline-width: 2px;
+    outline-style: dotted;
+  }
+
+  &:focus:active {
+    box-shadow: none;
+  }
+}
