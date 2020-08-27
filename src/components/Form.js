@@ -10,6 +10,7 @@ export const Form = ({ callBack }) => {
       return setError(true);
     }
     setError(false);
+    setAmount(5);
     return callBack(amount);
   };
 
