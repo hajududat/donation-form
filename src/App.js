@@ -61,8 +61,8 @@ function App() {
           ) : (
             <>
               Join the <strong className="donor-count">{donors}</strong> other{" "}
-              {donors === 1 ? "donor" : "donors"} who have already supported
-              this project.
+              {donors === 1 ? "donor" : "donors"} who{" "}
+              {donors === 1 ? "has" : "have"} already supported this project.
             </>
           )}
         </CardText>
