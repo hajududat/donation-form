@@ -1,39 +1,36 @@
 import React from "react";
 
-const ProgressTooltip = (props) => {
+const ProgressTooltip = ({ amount, message }) => {
   return (
     <div className="progress__tooltip" role="tooltip">
       <sup>$</sup>
       <strong className="donor-amount">
-        {Math.abs(props.amount).toFixed(2)}
+        {Math.abs(amount)
+          .toFixed(0)
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
       </strong>{" "}
-      {props.message}
+      {message}
       <span className="arrow"></span>
     </div>
   );
 };
 
-const ProgressBar = (props) => {
-  return <div className="progress__bar">{props.children}</div>;
-};
+export const Progress = ({ amount, goal }) => {
+  const amountLeft = goal - amount;
+  const percentage = (amount / goal) * 100 + "%";
+  const message =
+    amountLeft >= 0
+      ? "still needed to fund this project."
+      : "raised over the goal amount! Yay! 🥳";
 
-const ProgressFill = (props) => {
-  return <div className="progress__fill" style={{ width: props.width }}></div>;
-};
+  console.log(amount, amountLeft);
 
-const Progress = (props) => {
   return (
     <div className="progress">
-      <ProgressTooltip
-        amount={props.amount}
-        message={props.message}
-        position={props.percentage}
-      />
-      <ProgressBar>
-        <ProgressFill width={props.percentage} />
-      </ProgressBar>
+      <ProgressTooltip amount={amountLeft} message={message} />
+      <div className="progress__bar">
+        <div className="progress__fill" style={{ width: percentage }}></div>
+      </div>
     </div>
   );
 };
-
-export default Progress;

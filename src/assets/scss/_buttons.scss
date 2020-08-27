@@ -10,7 +10,7 @@
   height: 48px;
   border: 0;
   border-radius: 4px;
-  transition: background-color 0.2s ease-out;
+  transition: all 0.2s ease-out;
   white-space: nowrap;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -20,7 +20,6 @@
   &__primary {
     background-color: $green;
     color: $white;
-    transition: all .2s ease-in-out;
 
     &:focus {
       background-color: $green;
@@ -37,7 +36,6 @@
   &__secondary {
     background-color: $gray-light;
     color: $gray-dark;
-    transition: all .2s ease-in-out;
 
     &:focus {
       background-color: $gray-light;
@@ -55,6 +53,23 @@
       background-color: none;
       border: 1px solid $gray;
       height: 46px;
+
+      &:focus {
+        border: 1px solid $gray-medium;
+        box-shadow: inset 0 0 0 1px $gray-medium;
+      }
+
+      &:hover,
+      &:active {
+        border: 1px solid $gray-dark;
+      }
+    }
+
+    &--text {
+      background-color: transparent;
+      border: 1px solid transparent;
+      height: 46px;
+      line-height: 46px;
 
       &:focus {
         border: 1px solid $gray-medium;
