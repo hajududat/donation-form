@@ -9,7 +9,7 @@ import { Card, CardTitle, CardText } from "./components/Card";
 
 function App() {
   const goalAmount = 5000;
-  const endDate = moment("2020-09-06");
+  const endDate = moment("2020-09-30");
   const daysRemaining = endDate.diff(moment(), "days");
   const [donors, setDonors] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
